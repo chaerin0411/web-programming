@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dom 트리를 배우자</title>
+    <script>
+        document.write("title = " + document.title + "<br>");
+        document.write("url = " + document.URL + "<br>");
+
+        function func(a, b) {
+            document.fgColor = a;
+            document.bgColor = b;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>dom 뭐에요???</h2>
+    <input type="button" value="function 이용" onclick="func('pink', 'blue')">
+    <input type="button" value="style" onclick="body.style.background='red'">
+    <input type="button" value="흰색으로" onclick="document.bgColor='white'">
+    <input type="button" value="그린으로" onclick="document.bgColor='green'">
+    <input type="button" value="노랑으로" onclick="document.bgColor='yellow'">
+</body>
+
+</html>

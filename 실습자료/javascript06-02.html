@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2. script 태그에 자바스크립트 작성</title>
+    <script>
+        function over(obj) {
+            obj.src="img/banana.jpg";
+        }
+        function out(obj) {
+            obj.src="img/apple.jpg";
+        }
+    </script>
+</head>
+<body>
+   <img src="img/apple.jpg" alt="사과 이미지" onmouseover="over(this)" onmouseout="out(this)">
+    
+</body>
+</html>

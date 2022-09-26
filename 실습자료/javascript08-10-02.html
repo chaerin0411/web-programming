@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>동적 객체 생성하기</title>
+    <style>
+        #div1 {
+            background-color: pink;
+        }
+
+        #div2 {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+
+<body id="body1">
+    <h3>동적 객체 생성하기</h3>
+    <div id="div1">
+        <p>영어회회</p>
+        <p>데이터베이스관리</p>
+        <p>자료구조</p>
+        <p>컴퓨터제어실습</p>
+        <p>웹프로그래밍</p>
+        <p>자바프로그래밍</p>
+        <p>운영체제실습</p>
+        <p>취업영어</p>
+    </div>
+
+    <div id="div2">
+        <p>영어회회</p>
+        <p>데이터베이스관리</p>
+        <p>자료구조</p>
+        <p>컴퓨터제어실습</p>
+        <p>웹프로그래밍</p>
+        <p>자바프로그래밍</p>
+        <p>운영체제실습</p>
+        <p>취업영어</p>
+    </div>
+
+
+    <script>
+        // 객체 생성
+        var child1 = document.createTextNode(" 웹프로그래밍 ");
+        var child2 = document.createTextNode(" HTML ");
+        var child3 = document.createTextNode("CSS");
+        var child4 = document.createTextNode(" javaScript ");
+        var child5 = document.createTextNode(" DOM 객체 ");
+        var hr = document.createElement("hr");
+
+
+        // 객체 추가
+        var parent1 = document.getElementById("div1");
+        parent1.appendChild(child1);
+        parent1.appendChild(child2);
+        parent1.appendChild(hr);
+
+        var parent2 = document.getElementById("div2");
+        parent2.insertBefore(child3, parent2.children[0]);
+        parent2.insertBefore(child4, parent2.children[0]);
+        parent2.insertBefore(child5, parent2.children[0]);
+
+    </script>
+</body>
+
+</html>

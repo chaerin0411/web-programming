@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM 트리</title>
+</head>
+
+<body>
+    <h3>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+    <hr>
+    <p id="firstP" style="color:blue; background:yellow" onclick="this.style.color='teal'" onmouseover="this.style.background='pink'">
+        이것은 <span style="color:red">문장</span>입니다.
+    </p>
+    <script>
+        var p = document.getElementById("firstP");
+        var text = "p.id = " + p.id + "\n";
+        text += "p.tagName = " + p.tagName + "\n";
+        text += "p.innerHTML = " + p.innerHTML + "\n";
+        text += "p.style.color = " + p.style.color + "\n";
+        text += "p.onclick = " + p.onclick + "\n";
+        text += "p.chidElementCount = " + p.childElementCount + "\n";
+        text += "너비 = " + p.offsetWidth + "\n";
+        text += "높이 = " + p.offsetHeight + "\n";
+
+        alert(text);
+
+        document.write("<br>p.id: " + p.id);
+        document.write("<br>p.tagName: " + p.tagName);
+        document.write("<br>p.innerHTML: " + p.innerHTML);
+        document.write("<br>p.style.color: " + p.style.color);
+        document.write("<br>p.onclick: " + p.onclick);
+        document.write("<br>p.childElementCount: " + p.childElement);
+        document.write("<br>p.offsetWidth: " + p.offsetWidth);
+        document.write("<br>p.offsetHeight: " + p.offsetHeight);
+
+    </script>
+
+</body>
+
+</html>

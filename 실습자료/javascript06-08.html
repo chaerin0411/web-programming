@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>지역변수와 전역변수</title>
+</head>
+<body>
+    <script>
+        var x; // 전역변수 x 선언
+        function f() { // 함수 f() 코드
+            var y; // 지역변수 y 선언
+            x = 10; // 전역변수 x에 10 저장
+            y = 10; // 지역변수 y에 10 저장
+            z = 10; // 새로운 전역변수 z 선언. 10으로 초기화   
+        }
+    </script>
+    <script>
+        var x = 100; // 전역변수 x
+        function f() { // 함수 f() 코드
+            var x = 1; // 지역변수 x 선언
+            document.write("지역변수 x =" + x);
+            document.write("<br>");
+            document.write("전역변수 x =" + this.x);
+        }
+        f(); // 함수 f() 호출
+    </script>
+</body>
+</html>

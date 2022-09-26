@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM 트리</title>
+
+</head>
+
+<body>
+    <p id="firstp">가을 입니다</p>
+    <p id="secondp">단풍보러갑시다</p>
+    <script>
+        var p1 = document.getElementById("firstp");
+        p1.style.color = "red";
+        p1.style.fontSize = "20pt";
+
+        var p2 = document.getElementById("secondp");
+        p2.style.color = "green";
+
+    </script>
+    <div onclick="this.style.backgroundColor='orange'">
+        설악산 치악산 단풍
+    </div>
+</body>
+
+</html>

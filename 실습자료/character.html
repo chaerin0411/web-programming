@@ -1,0 +1,240 @@
+<!-- character.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dpcss.css">
+    <style>
+        .title {
+            font-family: cursive;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        function init() {
+            var title = document.getElementById("title");
+            title.onclick = function() {
+                this.style.fontStyle = "italic";
+            }
+        }
+
+        function load() {
+            var win = window.open();
+            win.location = "http://www.disney.co.kr";
+        }
+
+        function query() {
+            var ret = confirm("디즈니 페이지로 이동하시겠습니까?");
+            return ret; // comfirm()의 리턴 값은 true 또는 false
+
+        }
+
+        $(document).ready(function() {
+            $('img').mouseover(function() {
+                $(this).animate({
+                    'border-radius': "50%"
+                }, 1000);
+            });
+            $('img').mouseout(function() {
+                $(this).animate({
+                    'border-radius': "0%"
+                }, 1000);
+            });
+            
+            $('h1').filter(':even').css({
+                fontSize: '35px'
+            });
+            
+            $('h1').addClass('title');
+        });
+    </script>
+</head>
+
+<body onload="init()">
+    <header>
+        <img src="./img/logo.gif" alt="디즈니 로고" width="100%" height="250">
+        <h1 id="title">DISNEY PRINCESSES</h1>
+        <form>
+            <input type="text">
+            <input type="button" value="SEARCH" id="search">
+
+        </form>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">POSTER</a></li>
+            <li><a href="series.html">SERIES</a></li>
+            <li><a href="character.html">CHARACTER</a></li>
+            <li><a href="#" onclick="load()">OST</a></li>
+            <li><a href="https://www.youtube.com/channel/UCbv7Dcn5iNrAyd3GwgVHkIQ" onclick="return query()">TEASER</a></li>
+            <li><a href="#">LOGIN</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <aside id="left">
+            <h4>CHARACTER</h4>
+            <ul>
+                <li><a href="#princess1" target="ifr">백설공주</a></li>
+                <li><a href="#princess2" target="ifr">신데렐라</a></li>
+                <li><a href="#princess3" target="ifr">오로라</a></li>
+                <li><a href="#princess4" target="ifr">에리얼</a></li>
+                <li><a href="#princess5" target="ifr">벨</a></li>
+                <li><a href="#princess6" target="ifr">자스민</a></li>
+                <li><a href="#princess7" target="ifr">포카혼타스</a></li>
+                <li><a href="#princess8" target="ifr">뮬란</a></li>
+                <li><a href="#princess9" target="ifr">티아나</a></li>
+                <li><a href="#princess10" target="ifr">라푼젤</a></li>
+                <li><a href="#princess11" target="ifr">메리다</a></li>
+                <li><a href="#princess12" target="ifr">모아나</a></li>
+                <li><a href="#princess13" target="ifr">엘사</a></li>
+                <li><a href="#princess14" target="ifr">안나</a></li>
+            </ul>
+        </aside>
+
+        <section id="section">
+            <iframe src="pincess.html" name="ifr" frameborder="0" width=1200 height="750">
+            </iframe>
+
+        </section>
+
+        <section id="main">
+            <div class="clear">
+                <ul>
+                    <li id="princess1"><img src="./img/princess1.gif" width="465" height="500"></li>
+                    <li>이름 : 백설공주</li>
+                    <li>나이 : 14세</li>
+                    <li>국적 : 독일</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess2"><img src="./img/princess2.gif" width="465" height="500"></li>
+                    <li>이름 : 신데렐라</li>
+                    <li>나이 : 19세</li>
+                    <li>국적 : 프랑스</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess3"><img src="./img/princess3.gif" width="465" height="500"></li>
+                    <li>이름 : 오로라</li>
+                    <li>나이 : 16세</li>
+                    <li>국적 : 프랑스</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="princess4"><img src="./img/princess4.gif" width="465" height="500"></li>
+                    <li>이름 : 에리얼</li>
+                    <li>나이 : 16세</li>
+                    <li>국적 : 아틀란티카, 덴마크</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess5"><img src="./img/princess5.gif" width="465" height="500"></li>
+                    <li>이름 : 벨</li>
+                    <li>나이 : 17세</li>
+                    <li>국적 : 프랑스</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess6"><img src="./img/princess6.gif" width="465" height="500"></li>
+                    <li>이름 : 자스민</li>
+                    <li>나이 : 15세</li>
+                    <li>국적 : 아그라바</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="princess7"><img src="./img/princess7.jpg" width="465" height="500"></li>
+                    <li>이름 : 포카혼타스</li>
+                    <li>나이 : 18세</li>
+                    <li>국적 : 미국</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess8"><img src="./img/princess8.jpg" width="465" height="500"></li>
+                    <li>이름 : 뮬란</li>
+                    <li>나이 : 16세</li>
+                    <li>국적 : 중국</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess9"><img src="./img/princess9.jpg" width="465" height="500"></li>
+                    <li>이름 : 티아나</li>
+                    <li>나이 : 19세</li>
+                    <li>국적 : 미국</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="princess10"><img src="./img/princess10.gif" width="465" height="500"></li>
+                    <li>이름 : 라푼젤</li>
+                    <li>나이 : 18세</li>
+                    <li>국적 : 코로나 왕국</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess11"><img src="./img/princess11.jpg" width="465" height="500"></li>
+                    <li>이름 : 메리다</li>
+                    <li>나이 : 16세</li>
+                    <li>국적 : 영국</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess12"><img src="./img/princess12.jpg" width="465" height="500"></li>
+                    <li>이름 : 모아나</li>
+                    <li>나이 : 16세</li>
+                    <li>국적 : 모투누이</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="princess13"><img src="./img/princess13.gif" width="465" height="500"></li>
+                    <li>이름 : 엘사</li>
+                    <li>나이 : 24세</li>
+                    <li>국적 : 아렌델</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="princess14"><img src="./img/princess14.gif" width="465" height="500"></li>
+                    <li>이름 : 안나</li>
+                    <li>나이 : 21세</li>
+                    <li>국적 : 아렌델</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="clear">
+        CopyRight(C) 전채린 2020년 2학기 웹프로그래밍<br><br>
+        한 학기 동안 웹프로그래밍에 대해 배우면서 정말 많은 것을 알게 되고 배울 수 있었다.<br>
+        코드를 작성하면 바로 실행 결과를 눈으로 확인할 수 있어서 더 흥미를 느꼈고 성취감 또한 컸던 것 같다.<br>
+        앞으로 더 다양한 기능들을 배워 지식을 넓혀가고 싶고 심도 있는 웹페이지를 만들어보고 싶다.
+    </footer>
+</body></html>

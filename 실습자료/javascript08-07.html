@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>this 활용</title>
+    <script>
+        function change(obj, size, color, bgcolor) {
+            obj.style.color = color;
+            obj.style.fontSize = size;
+            obj.style.backgroundColor = bgcolor;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>this 활용</h3>
+    <hr>
+    <div onclick="this.style.backgroundColor='yellow';
+                  this.style.fontSize='30px'">스타일 바꾸기</div>
+    <button onclick="change(this, '30px', 'red', 'pink')">버튼</button>
+    <button onclick="change(this, '30px',  'blue', 'skyblue')">버튼</button>
+    <div onclick="change(this, '25px', 'orange', 'green')">여기 클릭하면 글자 크기와 색, 배경색 변경</div>
+</body>
+
+</html>

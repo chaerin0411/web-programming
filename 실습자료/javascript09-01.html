@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 태그에 리스너 작성</title>
+    <script>
+        function over(obj) {
+            obj.style.backgroundColor = "blue";
+        }
+
+        function out(obj) {
+            obj.style.backgroundColor = "yellow";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>HTML 태그에 리스너 작성</h3>
+    <hr>
+    <p onmouseover="this.style.backgroundColor='orchid'" onmouseout="this.style.backgroundColor='yellow'">01. 마우스를 올리면 orchid 색으로 변경</p>
+    <p onmouseover="over(this)" onmouseout="out(this)">02. 마우스를 올리면 blue 색으로 변경</p>
+
+</body>
+
+</html>
