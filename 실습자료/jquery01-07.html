@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('h3').filter(':odd').css({
+                backgroundColor: 'pink',
+                color: 'white'
+            });
+            $('h3').filter(':even').css({
+                backgroundColor: '#6e85d7',
+                color: 'white'
+            });
+            $('h4:odd').css({
+                backgroundColor: '#6e85d7',
+                color: 'black'
+            });
+            $('h4:even').css({
+                backgroundColor: 'skyblue',
+                color: 'white'
+            });                       
+        });
+    </script>
+</head>
+<body>
+    <h1>메뉴</h1>
+    <h3>파스타</h3>
+    <h3>리조또</h3>
+    <h3>피자</h3>
+    <h3>초밥</h3>
+    <h3>김치찌개</h3>
+    <h3>순두부찌개</h3>
+    <h4>짜장</h4>
+    <h4>짬뽕</h4>
+    <h4>탕수육</h4>
+    <h4>깐풍기</h4>
+</body></html>

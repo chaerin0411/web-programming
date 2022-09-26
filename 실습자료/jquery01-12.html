@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            var col = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+            $('h1').css('color', function(index) {
+                return col[index];
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>dog</h1>
+    <h1>cat</h1>
+    <h1>rabbit</h1>
+    <h1>koala</h1>
+    <h1>elephant</h1>
+    <h1>horse</h1>
+</body></html>

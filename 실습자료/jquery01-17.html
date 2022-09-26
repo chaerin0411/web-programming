@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+        var index = 1;
+        $('img').click(function() {
+            index = (index%3)+1;
+            $(this).attr('src', './img/flower'+index+'.jpg');
+        });
+    });
+    </script>
+</head>
+<body>
+    <div>
+        <p>그림을 클릭하세요</p>
+        <img src="./img/flower1.jpg" alt="" width="150" height="150">
+    </div>
+    
+</body>
+</html>

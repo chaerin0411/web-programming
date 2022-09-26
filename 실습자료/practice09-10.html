@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제 10번</title>
+    <style>
+        td {
+            width: 70px;
+        }
+
+        input[type=text] {
+            width: 270px;
+        }
+
+        input[type=button] {
+            width: 60px;
+        }
+
+    </style>
+    <script>
+        function back() {
+            var input = document.getElementById("input");
+            var len = input.value.length;
+            input.value = input.value.substr(0, len - 1);
+            if (len == 0)
+                return "0";
+            else
+                input.value.substr(0, len - 1);
+
+        }
+
+        function cleartext() {
+            var input = document.getElementById("input");
+            input.value = "0";
+
+        }
+
+        function compute() {
+            var input = document.getElementById("input");
+            input.value = eval(input.value);
+        }
+
+        function additem(data) {
+            var input = document.getElementById("input");
+            input.value += data;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" id="input"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="BACK" onclick="back()"></td>
+            <td><input type="button" value="CE" onclick="cleartext()"></td>
+            <td><input type="button" value="C" onclick="cleartext()"></td>
+            <td><input type="button" value="=" onclick="compute()"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="additem(this.value)"></td>
+            <td><input type="button" value="8" onclick="additem(this.value)"></td>
+            <td><input type="button" value="9" onclick="additem(this.value)"></td>
+            <td><input type="button" value="/" onclick="additem(this.value)"></td>
+
+
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="additem(this.value)"></td>
+            <td><input type="button" value="5" onclick="additem(this.value)"></td>
+            <td><input type="button" value="6" onclick="additem(this.value)"></td>
+            <td><input type="button" value="*" onclick="additem(this.value)"></td>
+
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="additem(this.value)"></td>
+            <td><input type="button" value="2" onclick="additem(this.value)"></td>
+            <td><input type="button" value="3" onclick="additem(this.value)"></td>
+            <td><input type="button" value="-" onclick="additem(this.value)"></td>
+        <tr>
+            <td><input type="button" value="0" onclick="additem(this.value)"></td>
+            <td><input type="button" value="+" onclick="additem(this.value)"></td>
+            <td><input type="button" value="NONE" onclick="additem(this.value)"></td>
+            <td><input type="button" value="NONE" onclick="additem(this.value)"></td>
+
+
+        </tr>
+
+    </table>
+</body>
+
+</html>

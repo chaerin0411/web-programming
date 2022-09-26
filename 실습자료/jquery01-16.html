@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('div').click(function() {
+                $(this).animate({
+                    width: "+=50"
+                }, 1000);
+                $(this).animate({
+                    height: "+=50"
+                }, 1000);
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div>
+        나 커져요
+    </div>
+
+</body>
+
+</html>

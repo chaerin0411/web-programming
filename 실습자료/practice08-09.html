@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제 9번</title>
+    <script>
+        function event1(papa) {
+            var string = prompt("다음 순서를 입력하세요")
+            var child = document.createElement("li");
+            child.innerHTML = string;
+            papa.appendChild(child);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol type="A" style="background-color: yellowgreen" onclick="event1(this)">
+        <li>물을 끓인다.</li>
+    </ol>
+</body>
+
+</html>

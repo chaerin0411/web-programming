@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('img').animate({
+                    marginLeft: "+=300"
+                }, "slow");
+                $('img').animate({
+                    marginLeft: "-=300"
+                }, "slow");
+            });
+            $('#btn2').click(function() {
+                $('img').animate({
+                    height: "toggle"
+                }, "slow");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <img src="./img/landscape.jpg" alt="" width="200" height="200">
+    <br>
+    <input type="button" value="좌우이동하기" id="btn1">
+    <input type="button" value="이미지토글하기" id="btn2">
+</body>
+
+</html>

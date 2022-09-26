@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('*').css({
+                background: 'mediumpurple',
+                color: 'pink'
+            });
+            $('#hideP').click(function() {
+                $('p').hide();
+            });
+            $('#showP').click(function() {
+                $('p').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>무료 나눔</h1>
+    <button id="hideP">텍스트 감추기</button>
+    <button id="showP">텍스트 표시하기</button>
+    <hr>
+    <p>품목 : 의류, 식품, 가전제품, 전자기기</p>
+    <p>대상 : 필요한 모든 분</p>
+    <p>일시 : 2020.12.31</p>
+    <p>연락처 : 010-4604-5578</p>
+</body></html>

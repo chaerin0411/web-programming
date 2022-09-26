@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제 1번, 1에서 100(100 포함)사이의 난수 10개를 생성하여 plots 이름의 배열에 저장하고, 배열에 저장된 수 중 가장 큰 수를 출력하는 웹 페이지를 작성하라.</title>
+</head>
+
+<body>
+    <h3>난수 10개 생성</h3>
+    <hr>
+    <script>
+        var plots = new Array(); // 배열 plots 선언
+        for (var i = 0; i < 10; i++) { // 난수 10개 배열에 저장
+            plots[i] = Math.floor(Math.random() * 100) + 1;
+        }
+        for (var i = 0; i < 10; i++) // 배열 출력
+            document.write(plots[i] + " ");
+
+        document.write("<hr>");
+        var big = plots[0]; // big은 제일 큰 수 저장
+        for (var i = 0; i < 10; i++) { // 큰 수 찾기
+            if (plots[i] > big)
+                big = plots[i];
+        }
+        document.write("제일 큰 수는 " + big);
+        document.write("<hr>");
+        plots.sort((a, b) => a - b);
+        for (var i = 0; i < 10; i++) {
+            document.write(plots[i] + " ");
+        }
+
+    </script>
+</body>
+
+</html>

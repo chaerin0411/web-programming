@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .small {
+            width: 100px;
+            height: 100px;
+            border: 2px dotted red;
+        }
+        .big {
+            position: absolute;
+            margin-left: 10px;
+            width: 200px;
+            height: 200px;
+            display: none;
+            border: 2px dotted red;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('#s1').click(function() {
+            $('#b1').fadeIn();
+        });
+        $('#b1').click(function() {
+            $('#b1').fadeOut();
+        });
+        $('#s2').click(function() {
+            $('#b2').fadeIn();
+        });
+        $('#b2').click(function() {
+            $('#b2').fadeOut();
+        });
+        $('#s3').click(function() {
+            $('#b3').fadeIn();
+        });
+        $('#b3').click(function() {
+            $('#b3').fadeOut();
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>사용법</h1>
+    <ol>
+        <li>작은 이미지를 클릭하면 큰 이미지가 나타납니다.</li>
+        <li>큰 이미지를 클릭하면 큰 이미지가 사라집니다.</li>
+    </ol>
+    <div id="gallery">
+        <ul>
+            <li>
+                <img src="./img/dog.jpg" class="small" id="s1">
+            </li>
+            <li>
+                <img src="./img/dog.jpg" class="big" id="b1">
+            </li>
+                        <li>
+                <img src="./img/dog2.jpg" class="small" id="s2">
+            </li>
+            <li>
+                <img src="./img/dog2.jpg" class="big" id="b2">
+            </li>
+                        <li>
+                <img src="./img/koala.jpg" class="small" id="s3">
+            </li>
+            <li>
+                <img src="./img/koala.jpg" class="big" id="b3">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

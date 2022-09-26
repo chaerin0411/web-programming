@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            var str = $('img').attr('src');
+            alert(str);
+            var msg = $('img').attr('alt');
+            alert(msg);
+            $('img').attr('width', 300);
+        });
+    </script>
+</head>
+<body>
+    <img src="./img/strawberry.jpg" alt="딸기 사진입니다.">
+</body></html>

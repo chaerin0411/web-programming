@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>openchallenge09</title>
+    <script>
+        function set() {
+            var table = document.createElement("table");
+            table.style.border = "1px solid green";
+            table.style.borderCollapse = "collapse";
+            document.body.appendChild(table);
+
+            for (var i = 0; i < 10; i++) {
+                var tr = document.createElement("tr");
+                table.appendChild(tr);
+                for (var j = 0; j < 10; j++) {
+                    var td = document.createElement("td");
+                    td.style.border = "1px solid green";
+                    td.style.width = "50px";
+                    td.style.height = "50px";
+                    tr.appendChild(td);
+                }
+            }
+            tds = document.getElementsByTagName("td");
+            img = document.createElement("img");
+            img.setAttribute("src", "./img/apple.jpg");
+            img.setAttribute("width", "50px");
+
+            img.onclick = imgload;
+            imgload(); // 강제 호출
+
+        }
+
+        function imgload() {
+            var index = Math.floor(Math.random() * 100);
+            tds[index].appendChild(img);
+        }
+
+    </script>
+</head>
+
+<body onload="set()">
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+
+</body>
+
+</html>

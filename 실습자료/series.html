@@ -1,0 +1,267 @@
+<!-- series.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dpcss.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        function init() {
+            var title = document.getElementById("title");
+            title.onclick = function() {
+                this.style.fontStyle = "italic";
+            }
+        }
+
+        function query() {
+            var ret = confirm("디즈니 페이지로 이동하시겠습니까?");
+            return ret; // comfirm()의 리턴 값은 true 또는 false
+
+        }
+
+        $(document).ready(function() {
+            $('img').mouseover(function() {
+                $(this).animate({
+                    'border-radius': "50%"
+                }, 1000);
+            });
+            $('img').mouseout(function() {
+                $(this).animate({
+                    'border-radius': "0%"
+                }, 1000);
+            });
+
+            $('h1').filter(':even').css({
+                fontSize: '35px'
+            });
+
+            $('#title').css("fontFamily", "cursive").css("fontSize", "35px");
+        });
+    </script>
+</head>
+
+<body onload="init()">
+    <header>
+        <img src="./img/logo.gif" alt="디즈니 로고" width="100%" height="250">
+        <h1 id="title">DISNEY PRINCESSES</h1>
+
+        <form>
+            <input type="text">
+            <input type="button" value="SEARCH" id="search">
+
+        </form>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">POSTER</a></li>
+            <li><a href="series.html">SERIES</a></li>
+            <li><a href="character.html">CHARACTER</a></li>
+            <li><a href="#" onclick="window.open('http://www.disney.co.kr', 'mywin', 'width=500, height=300')">OST</a></li>
+            <li><a href="https://www.youtube.com/channel/UCbv7Dcn5iNrAyd3GwgVHkIQ" onclick="return query()">TEASER</a></li>
+            <li><a href="#">LOGIN</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <aside id="left">
+            <h4>SERIES</h4>
+            <ul>
+                <li><a href="#series1" target="ifr">백설공주와 일곱 난쟁이</a></li>
+                <li><a href="#series2" target="ifr">신데렐라</a></li>
+                <li><a href="#series3" target="ifr">잠자는 숲속의 공주</a></li>
+                <li><a href="#series4" target="ifr">인어공주</a></li>
+                <li><a href="#series5" target="ifr">미녀와 야수</a></li>
+                <li><a href="#series6" target="ifr">알라딘</a></li>
+                <li><a href="#series7" target="ifr">포카혼타스</a></li>
+                <li><a href="#series8" target="ifr">뮬란</a></li>
+                <li><a href="#series9" target="ifr">공주와 개구리</a></li>
+                <li><a href="#series10" target="ifr">라푼젤</a></li>
+                <li><a href="#series11" target="ifr">메리다와 마법의 숲</a></li>
+                <li><a href="#series12" target="ifr">모아나</a></li>
+                <li><a href="#series13" target="ifr">겨울왕국1</a></li>
+                <li><a href="#series14" target="ifr">겨울왕국2</a></li>
+            </ul>
+        </aside>
+
+        <section id="section">
+            <iframe src="pincess.html" name="ifr" frameborder="0" width=1200 height="750">
+                화면지정하는 곳
+            </iframe>
+
+        </section>
+
+        <section id="main">
+            <div class="clear">
+                <ul>
+                    <li id="series1"><img src="./img/series1.jpg" width="465" height="400"></li>
+                    <li>제목 : 백설공주와 일곱 난쟁이(1937)</li>
+                    <li>OST :</li>
+                    <li>A Smile and song (미소 짓고 노래부르자)</li>
+                    <li>Whistle While You Work (휘파람 불면서)</li>
+                    <li>Someday My Prince Will Come (언젠간 왕자님이 올 거야)</li>
+                    <li>I'm wishing/One song (나의 소원/한 노래)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series2"><img src="./img/series2.jpg" width="465" height="400"></li>
+                    <li>제목 : 신데렐라(1950)</li>
+                    <li>OST :</li>
+                    <li>A Dream Is a Wish Your Heart Makes (꿈은 마음속의 소망)</li>
+                    <li>Oh, Sing Sweet Nightingale (예쁜 나이팅게일)</li>
+                    <li>So This Is Love (아름다운 우리 사랑)(듀엣곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series3"><img src="./img/series3.jpg" width="465" height="400"></li>
+                    <li>제목 : 잠자는 숲속의 공주(1959)</li>
+                    <li>OST :</li>
+                    <li>I Wonder</li>
+                    <li>Once upon a dream(어느 날 꿈 속에서)(듀엣곡)</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="series4"><img src="./img/series4.jpg" width="465" height="400"></li>
+                    <li>제목 : 인어공주(1989)</li>
+                    <li>OST :</li>
+                    <li>Part of Your World (저 곳으로)(솔로곡)</li>
+                    <li>For a Moment</li>
+                    <li>I remember (난 기억해)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series5"><img src="./img/series5.jpg" width="465" height="400"></li>
+                    <li>제목 : 미녀와 야수(1991)</li>
+                    <li>OST :</li>
+                    <li>Belle (아름다운 벨)</li>
+                    <li>Belle (Reprise) (아름다운 벨)(리프라이즈)</li>
+                    <li>Something There (놀랄 일이 벌어질 거야)(듀엣곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series6"><img src="./img/series6.jpg" width="465" height="400"></li>
+                    <li>제목 : 알라딘(1992)</li>
+                    <li>OST :</li>
+                    <li>A Whole New World (아름다운 세상)(듀엣곡)</li>
+                    <li>A Whole New World (Reprise) (아름다운 세상)(리프라이즈)(듀엣곡)</li>
+                    <li>Speechless (침묵하지 않아)(솔로곡)</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="series7"><img src="./img/series7.jpg" width="465" height="400"></li>
+                    <li>제목 : 포카혼타스(1995)</li>
+                    <li>OST :</li>
+                    <li>Just Around the Riverbend (강을 따라 가보면)</li>
+                    <li>Colors of the Wind (바람의 빛깔)</li>
+                    <li>If I Never Knew You (차라리 만나지 않았더라면)(듀엣곡)</li>
+                    <li>Savages (전투의 노래)(합창곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series8"><img src="./img/series8.jpg" width="465" height="400"></li>
+                    <li>제목 : 뮬란 (1998)</li>
+                    <li>나이 : 16세</li>
+                    <li>OST :</li>
+                    <li>Honor to Us All (가문을 빛낼 거야)</li>
+                    <li>Reflection (숨겨진 내 모습) (솔로곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series9"><img src="./img/series9.jpg" width="465" height="400"></li>
+                    <li>제목 : 공주와 개구리(2009)</li>
+                    <li>OST :</li>
+                    <li>Almost There</li>
+                    <li>Almost There (Reprise)</li>
+                    <li>When We're Human(합창곡)</li>
+                    <li>Down in New Orleans (Finale)</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="series10"><img src="./img/series10.jpg" width="465" height="400"></li>
+                    <li>제목 : 라푼젤(2010)</li>
+                    <li>OST :</li>
+                    <li>When Will My Life Begin?</li>
+                    <li>When Will My Life Begin? (Reprise 2)</li>
+                    <li>I've Got a Dream(합창곡)</li>
+                    <li>I See the Light (빛이 드디어 보여)(듀엣곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series11"><img src="./img/series11.jpg" width="465" height="400"></li>
+                    <li>제목 : 메리다와 마법의 숲(2012)</li>
+                    <li>OST :</li>
+                    <li>Touch the Sky</li>
+                    <li>Into the Open Air</li>
+                    <li>Noble Maiden fair (듀엣곡)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series12"><img src="./img/series12.jpg" width="465" height="400"></li>
+                    <li>제목 : 모아나(2016)</li>
+                    <li>OST :</li>
+                    <li>Where You Are(바로 여기야)(합창곡)</li>
+                    <li>How Far I'll Go(나 언젠간 떠날 거야)</li>
+                    <li>I Am Moana (Song of the Ancestors)(나는 모아나)(조상의 노래)</li>
+                    <li>Know Who You Are(너는 너를 알잖아)</li>
+                </ul>
+            </div>
+
+            <div class="clear">
+                <ul>
+                    <li id="series13"><img src="./img/series13.jpg" width="465" height="400"></li>
+                    <li>제목 : 겨울왕국(2014)</li>
+                    <li>나이 : 24세</li>
+                    <li>OST :</li>
+                    <li>Love Is an Open Door (사랑은 열린 문)(듀엣곡)</li>
+                    <li>Do You Want to Build a Snowman? (같이 눈사람 만들래?)</li>
+                    <li>For the First Time in Forever (태어나서 처음으로)(듀엣곡)</li>
+                    <li>Let It Go (다 잊어)</li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li id="series14"><img src="./img/series14.jpg" width="465" height="400"></li>
+                    <li>제목 : 겨울왕국2(2019)</li>
+                    <li>OST :</li>
+                    <li>Some Things Never Change (변치 않는 건)</li>
+                    <li>Into the Unknown (숨겨진 세상)</li>
+                    <li>The Next Right Thing (해야 할 일)</li>
+                    <li>Show Yourself (보여줘)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="clear">
+        CopyRight(C) 전채린 2020년 2학기 웹프로그래밍<br><br>
+        한 학기 동안 웹프로그래밍에 대해 배우면서 정말 많은 것을 알게 되고 배울 수 있었다.<br>
+        코드를 작성하면 바로 실행 결과를 눈으로 확인할 수 있어서 더 흥미를 느꼈고 성취감 또한 컸던 것 같다.<br>
+        앞으로 더 다양한 기능들을 배워 지식을 넓혀가고 싶고 심도 있는 웹페이지를 만들어보고 싶다.
+    </footer>
+</body></html>

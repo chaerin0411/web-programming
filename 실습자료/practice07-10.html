@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제 10번</title>
+    <script>
+        // 메소드로 사용할 2개의 함수 작성
+        function fill() {
+            this.amount += 2;
+        }
+
+        function consume() {
+            this.amount -= 2;
+        }
+
+        // 사용자 객체 만들기
+        var box = new Object();
+        box.color = "red";
+        box.size = 10;
+        box.amount = 0;
+        box.fill = fill;
+        box.consume = consume;
+
+    </script>
+</head>
+
+<body>
+    <h3>리터럴 표기 방식으로 작성된 다음 box 객체가 있다.</h3><br>
+    <h3>(1) box 객체를 new Object()를 이용하는 방법으로 다시 작성하라.</h3>
+    <hr>
+    <script>
+        // (2) 다음 주석에 지정된 대로 자바스크립트 코드를 작성하라.
+        // box 객체의 fill() 메소드 호출
+        box.fill();
+
+        // document.write()로 amount 프로퍼티 값 출력
+        document.write("box 객체의 fill() 메소드 호출 후 amount : " + box.amount + "<br>");
+
+        // box 객체의 consume() 메소드 호출
+        box.consume();
+
+        // document.write()로 amount 프로퍼티 값 출력
+        document.write("box 객체의 consume() 메소드 호출 후 amount : " + box.amount + "<br>");
+
+    </script>
+</body>
+
+</html>

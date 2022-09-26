@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('h3').eq(0).css('background', 'red').css('color', 'white');
+        $('h3').eq(1).css('background', 'orange').css('color', 'white');
+        // $('h3').eq(2).css('backgound', 'yellow');
+        $('h3').eq(-4).css('background', 'yellow');
+        $('h3').eq(-2).css('background', 'blue').css('color', 'white');
+        $('h3').eq(-1).css('background', 'purple').css('color', 'white');
+    });
+    </script>
+<body>
+    <h3>웹프로그래밍 0</h3>
+    <h3>자바프로그래밍 1</h3>
+    <h3>자료구조 2</h3>
+    <h3>데이터베이스관리 3</h3>
+    <h3>운영체제실습 4</h3>
+    <h3>컴퓨터제어실습 5</h3>
+</body></html>

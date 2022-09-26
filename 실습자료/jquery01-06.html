@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <style>
+        #gallery {
+            margin-top: 5px;
+            width: 330px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        #gallery figure { margin: 10px 20px; }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $("figure").hide(2000);
+                $("gallery").css("border", "none");
+            });
+            $('#btn2').click(function() {
+                $("figure").show(2000);
+                $("gallery").css("border", "20px solid black").css("border.radius", "10px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <div id="gallery">
+        <figure>
+            <img src="./img/rose.jpg" alt="" width="300" height="200">
+            <figcaption><b>장미</b>
+                강렬한 빨간 장미 꽃다발</figcaption>
+        </figure>
+    </div>
+</body></html>

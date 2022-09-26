@@ -1,0 +1,136 @@
+<!-- pincess.html -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.js">
+    </script>
+    <script>
+        var title;
+
+        function init(interval) {
+            setInterval("autoScroll()", interval);
+
+        }
+
+        function autoScroll() {
+            window.scrollBy(0, 200); // 200픽셀 위로 웹페이지 이동
+        }
+
+        function change() {
+            title = document.getElementById("title");
+            title.addEventListener("click", cli);
+        }
+
+        function cli() {
+            title.style.backgroundColor = "blanchedalmond";
+            title.style.fontStyle = "italic";
+        }
+
+        function changeimg() {
+            var princesses = document.getElementById("princesses");
+            var princessimg = document.getElementById("princessimg");
+            princessimg.src = princesses.options[princesses.selectedIndex].value;
+        }
+
+        $(document).ready(function() {
+            var index = 1;
+            $('#princessimg').click(function() {
+                index = (index % 23) + 1;
+                if (index == 2)
+                    $(this).attr('src', './img/princesses' + index + '.png');
+                else if (index >= 16)
+                    $(this).attr('src', './img/princesses' + index + '.gif');
+                else
+                    $(this).attr('src', './img/princesses' + index + '.jpg');
+            });
+
+            $("#title").css("color", "#F4A9A8");
+            $("#title").css("textAlign", "center");
+            
+            $('#btn1').click(function() {
+                $('#princessimg').show(2000);
+            });
+            $('#btn2').click(function() {
+                $('#princessimg').hide(2000);
+            });
+            $('#btn3').click(function() {
+                $('#princessimg').toggle(2000);
+            });
+            $('#btn4').click(function() {
+                $('#princessimg').slideUp(2000);
+            });
+            $('#btn5').click(function() {
+                $('#princessimg').slideDown(2000);
+            });
+            $('#btn6').click(function() {
+                $('#princessimg').slideToggle(2000);
+            });
+            $('#btn7').click(function() {
+                $('#princessimg').fadeIn(2000);
+            });
+            $('#btn8').click(function() {
+                $('#princessimg').fadeOut(2000);
+            });
+            $('#btn9').click(function() {
+                $('#princessimg').fadeToggle(2000);
+            });
+            
+            
+            $('button').eq(0).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px"); $('button').eq(-8).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(2).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(-6).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(4).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(-4).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(6).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(-2).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+            $('button').eq(8).css("backgroundColor", "#F4A9A8").css("color", "#666666").css("fontSize", "20px");
+        });
+    </script>
+</head>
+
+<body onload="init(1000)">
+    <img src="./img/princesses16.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses17.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses18.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses19.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses20.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses21.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses22.gif" alt="디즈니 공주들" width="100%" height="200">
+    <img src="./img/princesses23.gif" alt="디즈니 공주들" width="100%" height="200">
+    <h1 id="title" onclick="change()">DISNEY PRINCESSES</h1>
+
+    <div>
+        <select id="princesses" onchange="changeimg()">
+            <option value="./img/princesses1.jpg" selected>백설공주</option>
+            <option value="./img/princesses2.png">신데렐라</option>
+            <option value="./img/princesses3.jpg">오로라</option>
+            <option value="./img/princesses4.jpg">에리얼</option>
+            <option value="./img/princesses5.jpg">벨</option>
+            <option value="./img/princesses6.jpg">자스민</option>
+            <option value="./img/princesses7.jpg">포카혼타스</option>
+            <option value="./img/princesses8.jpg">뮬란</option>
+            <option value="./img/princesses9.jpg">티아나</option>
+            <option value="./img/princesses10.jpg">라푼젤</option>
+            <option value="./img/princesses11.jpg">메리다</option>
+            <option value="./img/princesses12.jpg">모이다</option>
+            <option value="./img/princesses13.jpg">엘사</option>
+            <option value="./img/princesses14.jpg">안나</option>
+            <option value="./img/princesses15.jpg">princesses</option>
+        </select>
+
+        <img id="princessimg" src="./img/princesses1.jpg" width="100%" height="550">
+
+        <button id="btn1">show</button>
+        <button id="btn2">hide</button>
+        <button id="btn3">toggle</button>
+        <button id="btn4">slidUp</button>
+        <button id="btn5">slideDown</button>
+        <button id="btn6">slideToggle</button>
+        <button id="btn7">fadeIn</button>
+        <button id="btn8">fadeOut</button>
+        <button id="btn9">fadeToggle</button>
+    </div>
+
+</body></html>
